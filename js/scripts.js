@@ -2,6 +2,16 @@ var romanNum = function(number) {
 
   var romanArray = [];
 
+  while(number >= 1000) {
+    number = number - 1000;
+    romanArray.push("M");
+  }
+
+  while(number >= 500) {
+    number = number - 500;
+    romanArray.push("D")
+  }
+
   while(number >= 100) {
     number = number - 100;
     romanArray.push("C");
