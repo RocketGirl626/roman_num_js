@@ -23,18 +23,41 @@ var romanNum = function(number) {
   }
 
   while(number >= 10) {
-    number = number - 10;
-    romanArray.push("X");
+    if (number === 9) {
+      romanArray.push("IX");
+      number = number - 9;
+    }
+    else {
+      romanArray.push("X");
+      number = number - 10;
+    }
   }
 
   while(number >= 5) {
-    number = number -5;
-    romanArray.push("V");
+    if (number === 9) {
+      romanArray.push("IX")
+      number = number -9;
+    }
+    else if (number === 4) {
+      romanArray.push("IV")
+      number = number - 4;
+    }
+    else {
+      romanArray.push("V");
+      number = number - 5;
+    }
+
   }
 
   while(number >= 1) {
-    number = number -1;
-    romanArray.push("I");
+    if (number === 4) {
+      romanArray.push("IV");
+      number = number - 4;
+    }
+    else {
+      romanArray.push("I");
+      number = number - 1;
+    }
   }
 
   var romanString = romanArray.join();
