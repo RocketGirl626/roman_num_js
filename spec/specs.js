@@ -32,4 +32,8 @@ describe("romanNum", function() {
     expect(romanNum(24)).to.equal("XXIV");
   });
 
+  it("will return XXXIX if the number 39 is given", function() {
+    expect(romanNum(39)).to.equal("XXXIX");
+  });
+
 });
